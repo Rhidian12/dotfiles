@@ -1,0 +1,56 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "battery", "cpu", "memory", "bluetooth", "tray"],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%A, %d %B %Y}"
+  },
+
+  "network": {
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": "󰈀  Connected",
+    "format-disconnected": "  Offline"
+  },
+
+  "battery": {
+    "format": "{capacity}%",
+    "format-charging": " {capacity}%",
+    "format-full": "  {capacity}%"
+  },
+
+  "cpu": {
+    "format": "  {usage}%"
+  },
+
+  "memory": {
+    "format": "  {used}MB"
+  },
+
+  "bluetooth": {
+      "format": " {status}",
+      "format-on": " On",
+      "format-off": " Off",
+      "format-disabled": "   Disabled",
+      "format-connected": " {device_alias}",
+      "format-connected-battery": " {device_alias} ({device_battery_percentage}%)",
+      "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+      "on-click": "blueman-manager"
+  },
+
+  "tray": {
+    "spacing": 10
+  }
+}
