@@ -16,3 +16,7 @@ end, { desc = "Format" })
 vim.keymap.set("i", "<C-BS>", "<C-w>", { desc = "Delete word backwards" })
 
 vim.keymap.set("n", "<leader>ff", Telescope.live_grep, { desc = "Find in files " })
+
+vim.keymap.set("n", "<leader>bf", function()
+  vim.fn.setreg("+", vim.fn.expand("%:."))
+end, { desc = "Copy Relative file path of open buffer " })
