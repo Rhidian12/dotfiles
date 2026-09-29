@@ -3,3 +3,9 @@
 -- Add any additional options here
 
 vim.opt.scrollback = 100000
+
+vim.filetype.add({
+  extension = {
+    txx = "cpp",
+  },
+})
